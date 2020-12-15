@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta charset="utf-8">
+<title></title>
+<body>
+
+  <ul class="tree" id="tree">
+    <li>Техника
+      <ul>
+        <li>ПК
+          <ul>
+            <li>Дорого</li>
+            <li>Дорого</li>
+          </ul>
+        </li>
+        <li>Д.О.
+          <ul>
+            <li>Проблемы</li>
+            <li>Проблемы</li>
+            <li>Проблемы</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Овощи
+      <ul>
+        <li>Красные
+          <ul>
+            <li>Помидор</li>
+            <li>Перец</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+
+
+</body>
+<script>
+for (let i of tree.querySelectorAll('li')) {
+var span = document.createElement('span');
+i.prepend(span);
+span.append(span.nextSibling);
+}
+
+
+tree.onclick = function(event) {
+
+if (event.target.tagName != 'SPAN') {
+return;
+}
+
+var childrenContainer = event.target.parentNode.querySelector('ul');
+if (!childrenContainer) return;
+
+childrenContainer.hidden = !childrenContainer.hidden;
+}
+</script>
+</html>

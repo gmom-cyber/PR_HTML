@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div style="padding: 10px 20px 10px; position: relative;" class="content">
+<h3>Dictumst</h3>
+<p>Sollicitudin dolor dictumst tristique eu convallis eleifend eget Ridiculus eleifend ante quis habitasse. Natoque pulvinar quis cubilia enim platea dolor in duis gravida fermentum auctor leo amet dis bibendum ridiculus.</p>
+</div>
+<div style="padding: 10px 20px 10px; position: relative;" class="content">
+<h3>Ullamcorper</h3>
+<p>Ullamcorper tellus aliquam adipiscing elementum curae;. Senectus, interdum, penatibus parturient tincidunt in consequat metus montes felis quis. Congue dis nulla volutpat, sollicitudin erat. Ultrices. Platea posuere porttitor. Metus aenean commodo Lorem Mollis tristique. Lorem ac quam inceptos sem donec laoreet.</p>
+</div>
+<div style="padding: 10px 20px 10px; position: relative;" class="content">
+<h3>Nascetur</h3>
+<p>Primis nascetur blandit duis sapien vitae volutpat nulla fringilla. Varius morbi. Ullamcorper morbi massa tempor integer bibendum. Per sem torquent purus ornare cum. Molestie aptent dignissim tempus sollicitudin dapibus volutpat. Rhoncus montes in nunc vitae torquent faucibus commodo viverra parturient.</p>
+</div>
+</body>
+<script>
+var  contents = document.querySelectorAll('.content');
+for(let  content of contents) {
+content.insertAdjacentHTML("afterbegin", '<button style=" position: absolute;   top: 0;right: 10px;display: block;" class="remove-button">x</button>');
+content.firstChild.onclick = () => content.remove();
+}
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<p id="test">
+0
+</p>
+<input type="submit" value="start"  onclick="start()" id="start">
+<input type="submit" value="stop"  onclick="stop()"  id="stop" disabled>
+
+<script>
+function start(){
+window.timerId = window.setInterval(timer, 500);
+document.getElementById('start').disabled = true;
+document.getElementById('stop').disabled = false;
+}
+
+function stop(){
+window.clearInterval(window.timerId);
+document.getElementById('start').disabled = false;
+document.getElementById('stop').disabled = true;
+}
+function timer(){
+var test = document.getElementById('test');
+test.innerHTML = parseInt(test.innerHTML)+1;
+}
+</script>
+  </body>
+</html>

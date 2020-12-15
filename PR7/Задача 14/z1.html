@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta charset="utf-8">
+<title></title>
+
+<body>
+
+  <div id="contents">
+
+    <p>
+      Ништяки для Веб Разработчика можно посмотреть <a href="https://www.youtube.com/watch?v=FQk_7USSYU8"> тут</a>
+      </p> <p>
+      Как Превратить Неловкость в Уверенность можно узнать <a href="https://ru.puma.com/"> тут</a>.
+    </p>
+  <div>
+
+  <script>
+    contents.onclick = function(event) {
+
+      function handleLink(href) {
+        let is_leaving = confirm(`Уверены, что хотите перейти на ${href}?`);
+        if (!is_leaving) return false;
+      }
+
+      var t = event.target.closest('a');
+
+      if (t && contents.contains(t)) {
+        return handleLink(t.getAttribute('href'));
+      }
+    };
+  </script>
+
+</body>
+</html>

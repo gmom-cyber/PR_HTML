@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input id="text" placeholder="Введите в меня текст"> <div style="DISPLAY: inline" id="result1"></div>
+<br>
+<br>
+<button id="Out">Вывести выражение</button>
+<script>
+function out() {
+    var e = document.getElementById('text').value;
+    document.getElementById('result1').innerHTML = e;
+}
+document.getElementById('Out').addEventListener('click', out);
+</script>
+  </body>
+</html>

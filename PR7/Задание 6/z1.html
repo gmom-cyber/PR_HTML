@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>изменится</p>
+    <p>изменится</p>
+    <p>not изменится</p>
+    <input type="submit" onclick="func()">
+    <script>
+      function func(){
+	       var elems=document.getElementsByTagName('p');
+	        elems[0].innerHTML='<u>изменится</u>';
+	        elems[1].innerHTML='<h3>изменится<h3>';
+	        elems[2].innerHTML='not изменится';
+        }
+</script>
+  </body>
+</html>

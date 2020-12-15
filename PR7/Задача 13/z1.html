@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta charset="utf-8">
+<title></title>
+<head>
+  <style>
+
+    .tooltip {
+      position: fixed;
+      padding: 10px 20px;
+      border: 1px solid #b3c9ce;
+      text-align: center;
+      background: #9f9f9f;
+    }
+  </style>
+</head>
+
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<button data-tooltip="Подсказка 1">Подсказка1</button>
+<button data-tooltip="Подсказка 2">Подсказка2</button>
+<script>
+var tooltipElem;
+document.onmouseover = function(event) {
+var t = event.target;
+var tooltipHtml = t.dataset.tooltip;
+if (!tooltipHtml) return;
+tooltipElem = document.createElement('div');
+tooltipElem.className = 'tooltip';
+tooltipElem.innerHTML = tooltipHtml;
+document.body.append(tooltipElem);
+var coords = t.getBoundingClientRect();
+var left = coords.left + (t.offsetWidth - tooltipElem.offsetWidth) / 2;
+if (left < 0) left = 0;
+var top = coords.top - tooltipElem.offsetHeight - 5;
+if (top < 0) {
+top = coords.top + t.offsetHeight + 5;
+}
+tooltipElem.style.left = left + 'px';
+tooltipElem.style.top = top + 'px';
+};
+document.onmouseout = function(e) {
+if (tooltipElem) {
+tooltipElem.remove();
+tooltipElem = null;
+}
+};
+</script>
+</body>
+</html>

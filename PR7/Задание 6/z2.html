@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<button onclick="f()">Нажмите на меня!</button>
+<script>
+function f(){
+	var elems1=document.getElementsByTagName('p');
+	for(var i =0; i <elems1.length; i++){
+		elems1[i].innerHTML=i + '. Абзац с текстом';
+	}
+}
+</script>
+  </body>
+</html>

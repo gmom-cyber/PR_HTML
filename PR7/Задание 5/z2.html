@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input id="first"> +
+<input id="second"> = <div style="DISPLAY: inline" id="result"></div>
+<br>
+<br>
+<button id="sum">Сумма</button>
+<script>
+function summ() {
+    var n1 = document.getElementById('first').value;
+    var n2= document.getElementById('second').value;
+    document.getElementById('result').innerHTML = Number(n1) + Number(n2);
+}
+
+document.getElementById('sum').addEventListener('click', summ);
+</script>
+  </body>
+</html>

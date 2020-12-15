@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <style>
+#elem{
+	width: 200px;
+	height: 200px;
+	padding: 30px;
+	border: 20px solid #BCBCBC;
+	overflow:auto;
+}
+#elem1{
+	width: 200px;
+	height: 200px;
+	padding: 30px;
+	border: 20px solid #BCBCBC;
+	overflow:auto;
+}
+#elem2{
+	width: 200px;
+	height: 200px;
+	padding: 30px;
+	border: 20px solid #BCBCBC;
+	overflow:auto;
+}
+
+</style>
+  </head>
+  <body>
+    <div id="elem">JНа языке PlantUML реализовать нижеследующую диаграмму. Прислать текст на PlantUML и картинку-результат, в которой ФИО студента заменены Вашими собственными. Дополнительное задание: вставить какую-нибудь полезную PlantUML-диаграмму в вашу Sphinx-документацию из задачи 3 (с помощью соотв. расширения Sphinx).</div>
+<br>
+<button onclick="f()">Узнать</button>
+<script>
+function f(){
+var elem = document.getElementById('elem');
+alert('Прокрученно на ' + elem.scrollTop + " элементов");
+}
+</script>
+<div id="elem1">JНа языке PlantUML реализовать нижеследующую диаграмму. Прислать текст на PlantUML и картинку-результат, в которой ФИО студента заменены Вашими собственными. Дополнительное задание: вставить какую-нибудь полезную PlantUML-диаграмму в вашу Sphinx-документацию из задачи 3 (с помощью соотв. расширения Sphinx).</div>
+<br>
+<button onclick="func1()">Прокрутить</button>
+<script>
+function func1(){
+var elem1 = document.getElementById('elem1');
+elem1.scrollTop = 200;
+}
+</script>
+<br>
+<br>
+<div id="elem2">JНа языке PlantUML реализовать нижеследующую диаграмму. Прислать текст на PlantUML и картинку-результат, в которой ФИО студента заменены Вашими собственными. Дополнительное задание: вставить какую-нибудь полезную PlantUML-диаграмму в вашу Sphinx-документацию из задачи 3 (с помощью соотв. расширения Sphinx).</div>
+<br>
+<button onclick="func2()">Прокрутить</button>
+<script>
+function func2(){
+var elem2 = document.getElementById('elem2');
+elem2.scrollTop = elem2.scrollHeight - 200;
+}
+</script>
+  </body>
+</html>

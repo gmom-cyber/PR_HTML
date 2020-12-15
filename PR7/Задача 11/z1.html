@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<style>
+  img {
+    width: 200px; height: 100px;
+  }
+.carousel {
+position: relative;
+width: 398px;
+padding: 10px 40px;
+}
+
+.carousel img {
+display: block;
+}
+.arrow {
+position: absolute;
+top: 60px;
+display: block;
+}
+.prev {
+left: 7px;
+}
+
+.next {
+right: 7px;
+}
+
+.gallery {
+overflow: hidden;
+}
+
+.gallery ul {
+height: 130px;
+width: 9999px;
+margin: 0;
+padding: 0;
+list-style: none;
+transition: margin-left 250ms;
+font-size: 0;
+}
+
+.gallery li {
+display: inline-block;
+}
+</style>
+</head>
+<body>
+<div id="carousel" class="carousel">
+<button class="a">Вперед</button>
+<div class="gallery">
+<ul class="im">
+<li><img src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\haribo.jpg" id="img1"></li>
+<li><img  src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\milka.jpg" id="img2"></li>
+<li><img src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\sprite.jpg" id="img3"></li>
+<li><img  src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\Снимок экрана (3).png" id="img4"></li>
+<li><img src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\Снимок экрана (4).png" id="img5"></li>
+</ul>
+</div>
+<button class="b">Назад</button>
+ </div>
+</body>
+<script>
+var list = carousel.querySelector('ul');
+var listElems = carousel.querySelectorAll('li');
+var position = 0;
+
+carousel.querySelector('.a').onclick = function() {
+
+position += 200 * 2;
+
+position = Math.min(position, 0)
+list.style.marginLeft = position + 'px';
+};
+
+carousel.querySelector('.b').onclick = function() {
+position -= 200 * 2;
+position = Math.max(position, -200 * (listElems.length - 2));
+list.style.marginLeft = position + 'px';
+};
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" value="Текст" style="width: 100px" id = "input1">
+		<br>
+		<br>
+			<button onclick="f1()">Убрать</button>
+			<button onclick="f2()">Вернуть</button>
+			<script>
+			function f1(){
+			var e = document.getElementById('input1');
+			e.style.display = 'none';
+			}
+
+			function f2(){
+			var e = document.getElementById('input1');
+			e.style.display = 'inline';
+			}
+			</script>
+
+  </body>
+</html>

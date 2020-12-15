@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="wrapper">
+  <img src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\haribo.jpg" id="img1" width="100">
+  <img src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\milka.jpg" id="img2" width="100">
+  <img src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\sprite.jpg" id="img3" width="100">
+  <img src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\Снимок экрана (3).png" id="img4" width="100">
+  <p>
+    <input type="submit" value="Запустить карусель!" onclick="go()" id="go">
+  </p>
+</div>
+  <script>
+  //Запускает таймер
+  function go(){
+    window.timerId = window.setInterval(timer, 1000);
+    document.getElementById('go').disabled = true;
+  }
+  function timer(){
+    var img1 = document.getElementById('img1');
+    var img2 = document.getElementById('img2');
+    var img3 = document.getElementById('img3');
+    var tmp = img1.src;
+    img1.src = img2.src;
+    img2.src = img3.src;
+    img3.src = img4.src;
+    img4.src = tmp;
+  }
+</script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#elem{
+	width: 200px;
+	height: 2000px;
+	padding: 30px;
+	border: 20px solid #BCBCBC;
+	overflow:auto;
+}
+#elem1{
+	width: 2000px;
+	height: 200px;
+	padding: 30px;
+	border: 20px solid #BCBCBC;
+	overflow:auto;
+}
+#elem2{
+	width: 1000px;
+	height: 1000px;
+	padding: 30px;
+	border: 20px solid #BCBCBC;
+	overflow:auto;
+}
+#elem3{
+	width: 1000px;
+	height: 1000px;
+	padding: 30px;
+	border: 20px solid #BCBCBC;
+	overflow:auto;
+}
+#elem4{
+	width: 1000px;
+	height: 1000px;
+	padding: 30px;
+	border: 20px solid #BCBCBC;
+	overflow:auto;
+}
+
+</style>
+</head>
+<body>
+<div id="elem">Primis nascetur blandit duis sapien vitae volutpat nulla fringilla. Varius morbi. Ullamcorper morbi massa tempor integer bibendum. Per sem torquent purus ornare cum. Molestie aptent dignissim tempus sollicitudin dapibus volutpat. Rhoncus montes in nunc vitae torquent faucibus commodo viverra parturient.</div>
+<br>
+<button onclick="func()">Узнать</button>
+<script>
+function func(){
+let elem = document.querySelector("elem");
+alert(pageYOffset);
+}
+</script>
+<br>
+<br>
+<div id="elem1">Euismod egestas lacinia iaculis et litora mollis montes. Urna non placerat ornare facilisi. Nec torquent facilisis erat parturient euismod Rutrum Luctus justo. Suscipit aenean aliquam aptent et tempus quisque convallis pretium quisque vitae mauris, ultrices augue, velit amet dis nibh accumsan posuere. Ullamcorper, maecenas netus nulla magna curabitur commodo est donec ornare primis. Hac. Duis torquent elit potenti Fames nam risus cum elementum neque taciti mus rhoncus nulla fusce porta.</div>
+<br>
+<button style = "width: 2000px" onclick="func1()">Узнать</button>
+<script>
+function func1(){
+let elem1 = document.querySelector("elem1");
+alert(pageXOffset);
+}
+</script>
+<br>
+<br>
+<div id="elem2">Euismod egestas lacinia iaculis et litora mollis montes. Urna non placerat ornare facilisi. Nec torquent facilisis erat parturient euismod Rutrum Luctus justo. Suscipit aenean aliquam aptent et tempus quisque convallis pretium quisque vitae mauris, ultrices augue, velit amet dis nibh accumsan posuere. Ullamcorper, maecenas netus nulla magna curabitur commodo est donec ornare primis. Hac. Duis torquent elit potenti Fames nam risus cum elementum neque taciti mus rhoncus nulla fusce porta.</div>
+<br>
+<button onclick="func2()">Прокрутить</button>
+<script>
+function func2(){
+let elem = document.querySelector("elem2");
+scrollTo(300, 500);
+}
+</script>
+<br>
+<br>
+<div id="elem3">Euismod egestas lacinia iaculis et litora mollis montes. Urna non placerat ornare facilisi. Nec torquent facilisis erat parturient euismod Rutrum Luctus justo. Suscipit aenean aliquam aptent et tempus quisque convallis pretium quisque vitae mauris, ultrices augue, velit amet dis nibh accumsan posuere. Ullamcorper, maecenas netus nulla magna curabitur commodo est donec ornare primis. Hac. Duis torquent elit potenti Fames nam risus cum elementum neque taciti mus rhoncus nulla fusce porta.</div>
+<br>
+<button onclick="func3()">Прокрутить</button>
+<script>
+function func3(){
+let elem = document.querySelector("elem3");
+scrollBy(0, 300);
+}
+</script>
+<br>
+<br>
+<div id="elem4">Euismod egestas lacinia iaculis et litora mollis montes. Urna non placerat ornare facilisi. Nec torquent facilisis erat parturient euismod Rutrum Luctus justo. Suscipit aenean aliquam aptent et tempus quisque convallis pretium quisque vitae mauris, ultrices augue, velit amet dis nibh accumsan posuere. Ullamcorper, maecenas netus nulla magna curabitur commodo est donec ornare primis. Hac. Duis torquent elit potenti Fames nam risus cum elementum neque taciti mus rhoncus nulla fusce porta.</div>
+<br>
+<button onclick="func4()">Прокрутить</button>
+<script>
+function func4(){
+let elem = document.querySelector("elem4");
+scrollTo(0, document.body.offsetHeight);
+}
+</script>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

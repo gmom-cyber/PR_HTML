@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="test1"><a href="https://www.google.ru/">ссылка 1</a><br>
+  <a href="https://www.tut.by/">ссылка 2</a><br>
+   <a href="https://yandex.ru/">ссылка 3</a></p>
+<button onclick="f()">Нажмите на меня!</button>
+<script>
+function f(){
+	var e=document.getElementById('test1');
+	e.innerHTML='<p id="test1"><a href="https://www.google.ru/">ссылка 1(http://google.ru)</a><br> <a href="https://www.tut.by/">ссылка 2(http://tut.by)</a><br><a href="https://yandex.ru/">ссылка 3(http://yandex.ru)</a>';
+}
+</script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="submit" onclick="f1(this)" value="НАЖАТЬ" id="block">
+    <br>
+    <input type="submit" onclick="f2('button')" value="unblock"  id="unblock">
+    <br>
+    <script>
+    function f1(){
+    var block = document.getElementById('block');
+    var unblock = document.getElementById('unblock');
+    block.value = 'block';
+    block.disabled = true;
+    unblock.style.display = 'block';
+    }
+
+    function f2(){
+    var block = document.getElementById('block');
+    var unblock = document.getElementById('unblock');
+    block.value = 'HАЖАТЬ';
+    block.disabled = false;
+    }
+
+    </script>
+  </body>
+</html>
