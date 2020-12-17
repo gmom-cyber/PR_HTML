@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			img{
+				border: 3px solid green;
+				padding: 5px 5px;
+        width: 200px;
+			}
+      .img:hover{
+        border: 3px solid red;
+      }
+		</style>
+		<script>
+			window.onload = function(){
+				for(let el of document.querySelectorAll('img'))
+					if(el.id != 'main_img')
+					{
+						var t = el.getBoundingClientRect();
+						el.style.width = (t.width / 1.5) + 'px';
+						el.style.height = (t.height / 1.5) + 'px';
+					}
+				pr.onclick = function(event){
+					main_img.src = event.target.src;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<img id="main_img" src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\haribo.jpg">
+		<div id="pr">
+			<img class = "img" src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\milka.jpg">
+			<img class = "img" src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\sprite.jpg">
+			<img class = "img" src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\Снимок экрана (1).png">
+			<img class = "img" src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\Снимок экрана (2).png">
+			<img class = "img" src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR7\img\Снимок экрана (3).png">
+		</div>
+	</body>
+</html>
