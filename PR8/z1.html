@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+		let time = 0, l = 0, iid;
+			window.onload = function(){
+				im.style.left = '0px';
+				im.onclick = function(event){
+					iid = setInterval(loop, 1000/50);
+				}
+			}
+		function loop(){
+			l += 2;
+			im.style.left = l+'px';
+			time += 1000/50;
+			if(time >= 2000)
+			{
+				clearInterval(iid);
+				console.log(l);
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<img id="im" width="100" src="C:\Users\d-vi9\OneDrive\Desktop\Практика по инфе\HTML\PR_HTML\PR8\img\milka.jpg" style="position: absolute;">
+	</body>
+</html>

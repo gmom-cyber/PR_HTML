@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			textarea{
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+		<script>
+			let text;
+			let to = 0;
+      let from = 0;
+			window.onload = function(){
+				text = textArea.value;
+				to = text.length;
+				start.onclick = function(){
+					animate({
+					duration: 9000,
+					timing: bounce,
+					draw: draw});
+				}
+			}
+			function animate({timing, draw, duration}) {
+				let start = performance.now();
+				requestAnimationFrame(function animate(time) {
+					let timeFraction = (time - start) / duration;
+					if (timeFraction > 1) timeFraction = 1;
+					let progress = timing(timeFraction);
+					draw(progress);
+					if (timeFraction < 1) {
+						requestAnimationFrame(animate);
+					}
+				});
+			}
+			function draw(progress) {
+				let result = (to - from) * progress + from;
+				textArea.value = text.substr(0, Math.ceil(result));
+			}
+			function bounce(timeFraction) {
+				return timeFraction;
+			}
+		</script>
+	</head>
+	<body>
+		<textarea id="textArea">Over set give. Give. Is may don't one. Blessed creepeth dry signs can't fifth gathered creepeth, lesser all. Their thing signs Were. Without, divided you'll had which set sea made sea make our. Set darkness under greater. Greater creeping rule two heaven you second cattle man, let seed lights have.
+		</textarea>
+		<input id="start" type="button" value="CТАРТ">
+	</body>
+</html>
